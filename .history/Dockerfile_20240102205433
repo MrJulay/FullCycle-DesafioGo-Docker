@@ -1,0 +1,8 @@
+FROM ubuntu:ls
+
+
+WORKDIR /app
+
+COPY ./fullcycle .
+
+ENTRYPOINT [ "./app/fullcycle" ]

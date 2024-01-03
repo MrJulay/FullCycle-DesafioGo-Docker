@@ -1,0 +1,5 @@
+FROM go:latest
+
+WORKDIR /app
+
+ENTRYPOINT [ "./app/fullcycle" ]

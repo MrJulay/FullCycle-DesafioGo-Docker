@@ -1,0 +1,5 @@
+FROM golang:bullseye
+
+WORKDIR /app
+
+ENTRYPOINT [ "./app/fullcycle" ]

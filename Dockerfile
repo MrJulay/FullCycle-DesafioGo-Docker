@@ -1,0 +1,11 @@
+# define imagem base 
+FROM scratch
+
+# define endereço do app
+WORKDIR /app
+
+# move o binário do app fullcycle
+COPY ./fullcycle .
+
+# executa:
+ENTRYPOINT [ "./fullcycle" ]

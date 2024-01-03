@@ -1,0 +1,5 @@
+FROM go:latest
+
+WORKDIR /src/usr/app
+
+
