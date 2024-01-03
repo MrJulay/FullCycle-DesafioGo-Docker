@@ -1,4 +1,4 @@
-FROM golang:latest AS BUILDER
+FROM golang:latest
 
 WORKDIR /app
 
@@ -10,10 +10,10 @@ RUN go build ./fullcycle.go
 FROM scratch
 
 # # define endereço do app
-WORKDIR /app
+# WORKDIR /app
 
 # # move o binário do app fullcycle
-COPY --from=builder /app/fullcycle .
+# COPY ./fullcycle .
 
 # # executa:
-ENTRYPOINT [ "./fullcycle" ]
+# ENTRYPOINT [ "./fullcycle" ]

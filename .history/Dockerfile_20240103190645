@@ -13,7 +13,7 @@ FROM scratch
 WORKDIR /app
 
 # # move o binário do app fullcycle
-COPY --from=builder /app/fullcycle .
+COPY --from=builder /var/www/laravel .
 
 # # executa:
-ENTRYPOINT [ "./fullcycle" ]
+# ENTRYPOINT [ "./fullcycle" ]

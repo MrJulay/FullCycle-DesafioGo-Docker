@@ -16,4 +16,4 @@ WORKDIR /app
 COPY --from=builder /app/fullcycle .
 
 # # executa:
-ENTRYPOINT [ "./fullcycle" ]
+# ENTRYPOINT [ "./fullcycle" ]
