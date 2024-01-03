@@ -19,5 +19,5 @@ WORKDIR /app
 # move o binário do app fullcycle diretamente da primeira imagem
 COPY --from=builder /app/fullcycle .
 
-# executa:
+# # executa:
 ENTRYPOINT [ "./fullcycle" ]

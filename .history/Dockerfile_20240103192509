@@ -4,20 +4,19 @@ FROM golang:latest AS BUILDER
 # Define endereço do app
 WORKDIR /app
 
-# Copia fontes em GO
+# Copia fontes 
 COPY . .
 
-# Realiza o build dentro da imagem
 RUN go build ./fullcycle.go
 
-# define imagem base final
+# define imagem base 
 FROM scratch
 
-# define endereço do app
+# # define endereço do app
 WORKDIR /app
 
-# move o binário do app fullcycle diretamente da primeira imagem
+# # move o binário do app fullcycle
 COPY --from=builder /app/fullcycle .
 
-# executa:
+# # executa:
 ENTRYPOINT [ "./fullcycle" ]
